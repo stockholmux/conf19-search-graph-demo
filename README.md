@@ -5,25 +5,21 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Requirements
+* RedisGraph w/ Search integration
+* RediSearch with the correct branch
+
+Note: you must have RediSearch earlier in your `redis.conf` file modules defintions
+
+## Setup
+In the `dataload` directory you will need run the `bulk_load.py` script as per that directory's readme
+
+After that is complete run the following command from redis-cli to full-text index the nodes:
 ```
-npm run serve
+> GRAPH.QUERY MAMMALS "CALL db.idx.fulltext.createNodeIndex('Species','description')"
 ```
 
-### Compiles and minifies for production
+## Run
 ```
-npm run build
+node server.js -p 6379 -a yourverysecurepassword -h localhost
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
