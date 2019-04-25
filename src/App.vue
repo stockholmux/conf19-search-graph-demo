@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Panels uri="ws://localhost:3333/graph"/>
+    <Panels uri="ws://localhost:4444/graph"/>
   </div>
 </template>
 
@@ -23,5 +23,6 @@ html {
   background-repeat:  no-repeat;
   background-position:  center center;
   background-attachment: fixed;
+  background-size: cover;
 }
 </style>

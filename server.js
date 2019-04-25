@@ -1,8 +1,8 @@
 const
   argv = require('yargs')
-    .require('p')
-    .require('h')
-    .require('a')
+    .require('p', 'Redis Port')
+    .require('h', 'Redis Host')
+    .require('a', 'Redis Password')
     .argv,
   redis   = require('redis'),
   express = require('express'),
@@ -67,6 +67,9 @@ app.ws('/graph',function(ws, req) {
   });
 });
 
-app.ws('/ve',websocket.expressWs);
-app.use(express.static('dist'))
-app.listen(3333);
+app.use(express.static('dist'));
+app.ws('/ve',websocket.expressWs)
+app.listen(4444, function(err) {
+  if (err) { throw err; }
+  console.log('Listening on 4444');
+});

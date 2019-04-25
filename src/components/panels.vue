@@ -10,8 +10,8 @@
         </b-col>
       </b-row>
       <b-row>
-        <b-col><SearchPanel uri="ws://localhost:3333/search" side="left"></SearchPanel></b-col>
-        <b-col><SearchPanel uri="ws://localhost:3333/search" side="right"></SearchPanel></b-col>
+        <b-col><SearchPanel uri="ws://localhost:4444/search" side="left"></SearchPanel></b-col>
+        <b-col><SearchPanel uri="ws://localhost:4444/search" side="right"></SearchPanel></b-col>
       </b-row>
     </b-container>
   </div>
