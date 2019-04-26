@@ -12,7 +12,7 @@ npm install
 Note: you must have RediSearch earlier in your `redis.conf` file modules defintions
 
 ## Setup
-In the `dataload` directory you will need run the `bulk_load.py` script as per that directory's readme
+In the `dataload` directory, you'll need to run the RedisGraph bulk loader Python script as per that directory's readme
 
 After that is complete run the following command from redis-cli to full-text index the nodes:
 ```
